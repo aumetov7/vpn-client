@@ -18,11 +18,15 @@ final class VPNManagerImpl: VPNManager {
     
     func setupVPN() async throws {
         do {
+            guard let config = VLESSConfig(urlString: "") else {
+                return
+            }
+            
             try await vpnManager.loadFromPreferences()
             
             let protocolConfiguration = NETunnelProviderProtocol()
             protocolConfiguration.providerBundleIdentifier = ""
-            protocolConfiguration.serverAddress = ""
+            protocolConfiguration.serverAddress = config.serverAddress
             
             vpnManager.protocolConfiguration = protocolConfiguration
             vpnManager.localizedDescription = "VLESS VPN"
