@@ -25,7 +25,7 @@ final class VPNManagerImpl: VPNManager {
             try await vpnManager.loadFromPreferences()
             
             let protocolConfiguration = NETunnelProviderProtocol()
-            protocolConfiguration.providerBundleIdentifier = ""
+            protocolConfiguration.providerBundleIdentifier = "com.fimacomarketing.testvpn.VPNPacketTunnel"
             protocolConfiguration.serverAddress = config.serverAddress
             
             vpnManager.protocolConfiguration = protocolConfiguration

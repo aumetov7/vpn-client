@@ -9,7 +9,19 @@
 /* Begin PBXBuildFile section */
 		D89BCF0E2D6F21ED00E24742 /* libXray.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89BCF0C2D6F21DD00E24742 /* libXray.xcframework */; };
 		D89BCF0F2D6F21ED00E24742 /* libXray.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D89BCF0C2D6F21DD00E24742 /* libXray.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D89BCF262D6F373000E24742 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89BCF252D6F373000E24742 /* NetworkExtension.framework */; };
+		D89BCF2E2D6F373000E24742 /* VPNPacketTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D89BCF232D6F373000E24742 /* VPNPacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D89BCF2C2D6F373000E24742 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D89BCE8A2D6C2ED600E24742 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D89BCF222D6F373000E24742;
+			remoteInfo = VPNPacketTunnel;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		D89BCEF52D6DB3A000E24742 /* Embed Foundation Extensions */ = {
@@ -18,6 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				D89BCF2E2D6F373000E24742 /* VPNPacketTunnel.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,6 +51,8 @@
 /* Begin PBXFileReference section */
 		D89BCE922D6C2ED600E24742 /* vpn-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vpn-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89BCF0C2D6F21DD00E24742 /* libXray.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libXray.xcframework; sourceTree = "<group>"; };
+		D89BCF232D6F373000E24742 /* VPNPacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VPNPacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D89BCF252D6F373000E24742 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -48,6 +63,13 @@
 			);
 			target = D89BCE912D6C2ED600E24742 /* vpn-client */;
 		};
+		D89BCF322D6F373000E24742 /* Exceptions for "VPNPacketTunnel" folder in "VPNPacketTunnel" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D89BCF222D6F373000E24742 /* VPNPacketTunnel */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -57,6 +79,14 @@
 				D89BCEF72D6DB6B700E24742 /* Exceptions for "vpn-client" folder in "vpn-client" target */,
 			);
 			path = "vpn-client";
+			sourceTree = "<group>";
+		};
+		D89BCF272D6F373000E24742 /* VPNPacketTunnel */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D89BCF322D6F373000E24742 /* Exceptions for "VPNPacketTunnel" folder in "VPNPacketTunnel" target */,
+			);
+			path = VPNPacketTunnel;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -70,6 +100,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D89BCF202D6F373000E24742 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D89BCF262D6F373000E24742 /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				D89BCE942D6C2ED600E24742 /* vpn-client */,
+				D89BCF272D6F373000E24742 /* VPNPacketTunnel */,
+				D89BCF242D6F373000E24742 /* Frameworks */,
 				D89BCE932D6C2ED600E24742 /* Products */,
 				D89BCF0C2D6F21DD00E24742 /* libXray.xcframework */,
 			);
@@ -86,8 +126,17 @@
 			isa = PBXGroup;
 			children = (
 				D89BCE922D6C2ED600E24742 /* vpn-client.app */,
+				D89BCF232D6F373000E24742 /* VPNPacketTunnel.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D89BCF242D6F373000E24742 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D89BCF252D6F373000E24742 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +155,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D89BCF2D2D6F373000E24742 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				D89BCE942D6C2ED600E24742 /* vpn-client */,
@@ -116,6 +166,28 @@
 			productName = "vpn-client";
 			productReference = D89BCE922D6C2ED600E24742 /* vpn-client.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D89BCF222D6F373000E24742 /* VPNPacketTunnel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D89BCF2F2D6F373000E24742 /* Build configuration list for PBXNativeTarget "VPNPacketTunnel" */;
+			buildPhases = (
+				D89BCF1F2D6F373000E24742 /* Sources */,
+				D89BCF202D6F373000E24742 /* Frameworks */,
+				D89BCF212D6F373000E24742 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D89BCF272D6F373000E24742 /* VPNPacketTunnel */,
+			);
+			name = VPNPacketTunnel;
+			packageProductDependencies = (
+			);
+			productName = VPNPacketTunnel;
+			productReference = D89BCF232D6F373000E24742 /* VPNPacketTunnel.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -128,6 +200,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					D89BCE912D6C2ED600E24742 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					D89BCF222D6F373000E24742 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -147,12 +222,20 @@
 			projectRoot = "";
 			targets = (
 				D89BCE912D6C2ED600E24742 /* vpn-client */,
+				D89BCF222D6F373000E24742 /* VPNPacketTunnel */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D89BCE902D6C2ED600E24742 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D89BCF212D6F373000E24742 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -169,7 +252,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D89BCF1F2D6F373000E24742 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D89BCF2D2D6F373000E24742 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D89BCF222D6F373000E24742 /* VPNPacketTunnel */;
+			targetProxy = D89BCF2C2D6F373000E24742 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D89BCE9E2D6C2ED700E24742 /* Debug */ = {
@@ -357,6 +455,58 @@
 			};
 			name = Release;
 		};
+		D89BCF302D6F373000E24742 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VPNPacketTunnel/VPNPacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KF4T4F29C9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VPNPacketTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VPNPacketTunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fimacomarketing.testvpn.VPNPacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D89BCF312D6F373000E24742 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = VPNPacketTunnel/VPNPacketTunnel.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KF4T4F29C9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = VPNPacketTunnel/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = VPNPacketTunnel;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fimacomarketing.testvpn.VPNPacketTunnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -374,6 +524,15 @@
 			buildConfigurations = (
 				D89BCEA12D6C2ED700E24742 /* Debug */,
 				D89BCEA22D6C2ED700E24742 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D89BCF2F2D6F373000E24742 /* Build configuration list for PBXNativeTarget "VPNPacketTunnel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D89BCF302D6F373000E24742 /* Debug */,
+				D89BCF312D6F373000E24742 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
