@@ -11,7 +11,7 @@ import SwiftUI
 struct vpn_clientApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VPNConnectionBuilder.build()
         }
     }
 }
