@@ -6,3 +6,4 @@
 *.xcconfig
 .build/
 .swiftpm/
+libXray.xcframework
