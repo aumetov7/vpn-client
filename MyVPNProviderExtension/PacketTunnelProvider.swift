@@ -17,14 +17,15 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         
         guard let protocolConfiguration = protocolConfiguration as? NETunnelProviderProtocol,
               let providerConfiguration = protocolConfiguration.providerConfiguration,
-              let jsonConfig = providerConfiguration["config"] as? String
+              let jsonConfig = providerConfiguration["config"] as? String,
+              let host = providerConfiguration["host"] as? String
         else {
             os_log("Отсутствует JSON-конфигурация", log: OSLog.default, type: .error)
             return
         }
         
         os_log("JSON-конфигурация: %{PUBLIC}@", log: OSLog.default, type: .debug, jsonConfig)
-        let tunnelSettings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: "38.107.234.57")
+        let tunnelSettings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: host)
         
         let ipv4Settings = NEIPv4Settings(addresses: ["10.8.0.2"], subnetMasks: ["255.255.255.0"])
         ipv4Settings.includedRoutes = [NEIPv4Route.default()]
@@ -51,29 +52,14 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
     }
     
     override func handleAppMessage(_ messageData: Data, completionHandler: ((Data?) -> Void)?) {
-        // Add code here to handle the message.
         if let handler = completionHandler {
             handler(messageData)
         }
     }
     
     override func sleep(completionHandler: @escaping () -> Void) {
-        // Add code here to get ready to sleep.
         completionHandler()
     }
     
-    override func wake() {
-        // Add code here to wake up.
-    }
-}
-
-private struct Configuration {
-    let address: String
-
-    init(proto: NETunnelProviderProtocol) throws {
-        guard let serverAddress = proto.serverAddress else {
-            throw NEVPNError(.configurationInvalid)
-        }
-        self.address = serverAddress
-    }
+    override func wake() { }
 }
