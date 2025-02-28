@@ -26,5 +26,11 @@ struct VPNConnectionScreen<VM: VPNConnectionViewModel>: View {
             }
             .padding()
         }
+        .alert(
+            viewModel.error?.localizedDescription ?? "",
+            isPresented: $viewModel.showAlert
+        ) {
+            Button("OK", role: .cancel) { }
+        }
     }
 }

@@ -9,6 +9,7 @@ import Foundation
 
 protocol VPNConnectionViewModel: ObservableObject {
     var isConnected: Bool { get }
+    var showAlert: Bool { get set }
     var error: Error? { get }
     
     init(vpnManager: VPNManager)
@@ -19,6 +20,8 @@ protocol VPNConnectionViewModel: ObservableObject {
 final class VPNConnectionViewModelImpl: VPNConnectionViewModel {
     @Published private(set) var isConnected = false
     @Published private(set) var error: Error? = nil
+    
+    @Published var showAlert = false
     
     private let vpnManager: VPNManager
     
@@ -34,6 +37,7 @@ final class VPNConnectionViewModelImpl: VPNConnectionViewModel {
             
             isConnected.toggle()
         } catch {
+            self.showAlert = true
             self.error = error
         }
     }
