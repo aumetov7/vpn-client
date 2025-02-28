@@ -14,7 +14,7 @@ protocol VPNManager {
 
 final class VPNManagerImpl: VPNManager {
     private var manager = NETunnelProviderManager()
-    private let vlessURL = "vless://bbfb27eb-21f6-4557-ae46-1f62036aab14@3h-kazakhstan1.09vpn.com:8443?path=/vless/&security=tls&encryption=none&type=ws#u9519564918"
+    private let vlessURL = "vless://c4828198-f5d0-11ef-b1bc-db90f150bcf7@am1.vpnjantit.com:10002?encryption=none&security=tls&type=ws&path=%2fvpnjantit#testVPN-vpnjantit.com"
     
     init() {
         Task {
@@ -75,9 +75,13 @@ private extension VPNManagerImpl {
             throw VLESSConfig.VLESSError.jsonError
         }
         
+        guard let host = config.resolveIPAddress() else {
+            throw VLESSConfig.VLESSError.ipError
+        }
+        
         protocolConfiguration.providerBundleIdentifier = "com.fimacomarketing.testvpn.MyVPNProviderExtension"
         protocolConfiguration.serverAddress = config.serverAddress
-        protocolConfiguration.providerConfiguration = ["config": json, "host": "38.107.234.57"]
+        protocolConfiguration.providerConfiguration = ["config": json, "host": host]
         
         protocolConfiguration.includeAllNetworks = true
         protocolConfiguration.disconnectOnSleep = false
@@ -94,16 +98,3 @@ private extension VPNManagerImpl {
     }
 }
 
-extension NEVPNStatus {
-    var descriptionString: String {
-        switch self {
-        case .invalid: return "Invalid"
-        case .disconnected: return "Disconnected"
-        case .connecting: return "Connecting"
-        case .connected: return "Connected"
-        case .reasserting: return "Reasserting"
-        case .disconnecting: return "Disconnecting"
-        @unknown default: return "Unknown"
-        }
-    }
-}

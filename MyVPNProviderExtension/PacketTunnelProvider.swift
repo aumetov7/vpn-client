@@ -25,13 +25,14 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         }
         
         os_log("JSON-конфигурация: %{PUBLIC}@", log: OSLog.default, type: .debug, jsonConfig)
+        
         let tunnelSettings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: host)
         
         let ipv4Settings = NEIPv4Settings(addresses: ["10.8.0.2"], subnetMasks: ["255.255.255.0"])
         ipv4Settings.includedRoutes = [NEIPv4Route.default()]
         tunnelSettings.ipv4Settings = ipv4Settings
         
-        tunnelSettings.dnsSettings = NEDNSSettings(servers: ["1.1.1.1", "8.8.8.8"])
+        tunnelSettings.dnsSettings = NEDNSSettings(servers: ["8.8.8.8", "8.8.4.4"])
         
         setTunnelNetworkSettings(tunnelSettings) { error in
             if let error = error {
