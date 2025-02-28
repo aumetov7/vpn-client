@@ -41,7 +41,9 @@ struct VLESSConfig {
         self.path = queryItems.first(where: { $0.name == "path" })?.value
         self.tag = components.fragment
     }
-    
+}
+
+extension VLESSConfig {
     func toJSON() -> String? {
         var config: [String: Any] = [
             "outbounds": [
@@ -83,5 +85,10 @@ struct VLESSConfig {
         }
         
         return nil
+    }
+    
+    enum VLESSError: Error {
+        case parsingError
+        case jsonError
     }
 }
