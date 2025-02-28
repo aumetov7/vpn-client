@@ -15,6 +15,16 @@ struct VPNConnectionScreen<VM: VPNConnectionViewModel>: View {
     }
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Button(action: viewModel.toggleVPN) {
+                Text(viewModel.isConnected ? "Отключить VPN" : "Подключить VPN")
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(viewModel.isConnected ? Color.red : Color.green)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            .padding()
+        }
     }
 }

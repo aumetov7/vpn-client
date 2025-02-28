@@ -7,5 +7,7 @@
         <key>NSAllowsArbitraryLoads</key>
         <true/>
     </dict>
+    <key>VPNEntitlement</key>
+    <string>com.apple.developer.networking.vpn.api</string>
 </dict>
 </plist>

@@ -26,11 +26,9 @@ final class VPNConnectionViewModelImpl: VPNConnectionViewModel {
     
     func toggleVPN() {
         do {
-            if isConnected {
-                vpnManager.disconnect()
-            } else {
-                try vpnManager.connect()
-            }
+            isConnected
+            ? vpnManager.disconnect()
+            : try vpnManager.connect()
             
             isConnected.toggle()
         } catch {

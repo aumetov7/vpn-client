@@ -9,7 +9,5 @@
 		<key>NSExtensionPrincipalClass</key>
 		<string>$(PRODUCT_MODULE_NAME).PacketTunnelProvider</string>
 	</dict>
-	<key>NEVPNProtocol</key>
-	<string>VLESS</string>
 </dict>
 </plist>

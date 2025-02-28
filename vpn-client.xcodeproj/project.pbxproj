@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		D89BCF0E2D6F21ED00E24742 /* libXray.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89BCF0C2D6F21DD00E24742 /* libXray.xcframework */; };
 		D89BCF0F2D6F21ED00E24742 /* libXray.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D89BCF0C2D6F21DD00E24742 /* libXray.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D89BCF262D6F373000E24742 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89BCF252D6F373000E24742 /* NetworkExtension.framework */; };
-		D89BCF2E2D6F373000E24742 /* VPNPacketTunnel.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D89BCF232D6F373000E24742 /* VPNPacketTunnel.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D89BCF3C2D7090CB00E24742 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D89BCF252D6F373000E24742 /* NetworkExtension.framework */; };
+		D89BCF442D7090CB00E24742 /* MyVPNProviderExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D89BCF3B2D7090CB00E24742 /* MyVPNProviderExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D89BCF492D70942A00E24742 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D89BCF352D6F3BBF00E24742 /* libresolv.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D89BCF2C2D6F373000E24742 /* PBXContainerItemProxy */ = {
+		D89BCF422D7090CB00E24742 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D89BCE8A2D6C2ED600E24742 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D89BCF222D6F373000E24742;
-			remoteInfo = VPNPacketTunnel;
+			remoteGlobalIDString = D89BCF3A2D7090CB00E24742;
+			remoteInfo = MyVPNProviderExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -30,7 +31,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D89BCF2E2D6F373000E24742 /* VPNPacketTunnel.appex in Embed Foundation Extensions */,
+				D89BCF442D7090CB00E24742 /* MyVPNProviderExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,8 +52,9 @@
 /* Begin PBXFileReference section */
 		D89BCE922D6C2ED600E24742 /* vpn-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vpn-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89BCF0C2D6F21DD00E24742 /* libXray.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = libXray.xcframework; sourceTree = "<group>"; };
-		D89BCF232D6F373000E24742 /* VPNPacketTunnel.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VPNPacketTunnel.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D89BCF252D6F373000E24742 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		D89BCF352D6F3BBF00E24742 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		D89BCF3B2D7090CB00E24742 /* MyVPNProviderExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyVPNProviderExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -63,12 +65,12 @@
 			);
 			target = D89BCE912D6C2ED600E24742 /* vpn-client */;
 		};
-		D89BCF322D6F373000E24742 /* Exceptions for "VPNPacketTunnel" folder in "VPNPacketTunnel" target */ = {
+		D89BCF482D7090CB00E24742 /* Exceptions for "MyVPNProviderExtension" folder in "MyVPNProviderExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = D89BCF222D6F373000E24742 /* VPNPacketTunnel */;
+			target = D89BCF3A2D7090CB00E24742 /* MyVPNProviderExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -81,12 +83,12 @@
 			path = "vpn-client";
 			sourceTree = "<group>";
 		};
-		D89BCF272D6F373000E24742 /* VPNPacketTunnel */ = {
+		D89BCF3D2D7090CB00E24742 /* MyVPNProviderExtension */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				D89BCF322D6F373000E24742 /* Exceptions for "VPNPacketTunnel" folder in "VPNPacketTunnel" target */,
+				D89BCF482D7090CB00E24742 /* Exceptions for "MyVPNProviderExtension" folder in "MyVPNProviderExtension" target */,
 			);
-			path = VPNPacketTunnel;
+			path = MyVPNProviderExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -100,11 +102,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D89BCF202D6F373000E24742 /* Frameworks */ = {
+		D89BCF382D7090CB00E24742 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D89BCF262D6F373000E24742 /* NetworkExtension.framework in Frameworks */,
+				D89BCF492D70942A00E24742 /* libresolv.tbd in Frameworks */,
+				D89BCF3C2D7090CB00E24742 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				D89BCE942D6C2ED600E24742 /* vpn-client */,
-				D89BCF272D6F373000E24742 /* VPNPacketTunnel */,
+				D89BCF3D2D7090CB00E24742 /* MyVPNProviderExtension */,
 				D89BCF242D6F373000E24742 /* Frameworks */,
 				D89BCE932D6C2ED600E24742 /* Products */,
 				D89BCF0C2D6F21DD00E24742 /* libXray.xcframework */,
@@ -126,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				D89BCE922D6C2ED600E24742 /* vpn-client.app */,
-				D89BCF232D6F373000E24742 /* VPNPacketTunnel.appex */,
+				D89BCF3B2D7090CB00E24742 /* MyVPNProviderExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 		D89BCF242D6F373000E24742 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D89BCF352D6F3BBF00E24742 /* libresolv.tbd */,
 				D89BCF252D6F373000E24742 /* NetworkExtension.framework */,
 			);
 			name = Frameworks;
@@ -155,7 +159,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				D89BCF2D2D6F373000E24742 /* PBXTargetDependency */,
+				D89BCF432D7090CB00E24742 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				D89BCE942D6C2ED600E24742 /* vpn-client */,
@@ -167,26 +171,26 @@
 			productReference = D89BCE922D6C2ED600E24742 /* vpn-client.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D89BCF222D6F373000E24742 /* VPNPacketTunnel */ = {
+		D89BCF3A2D7090CB00E24742 /* MyVPNProviderExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D89BCF2F2D6F373000E24742 /* Build configuration list for PBXNativeTarget "VPNPacketTunnel" */;
+			buildConfigurationList = D89BCF452D7090CB00E24742 /* Build configuration list for PBXNativeTarget "MyVPNProviderExtension" */;
 			buildPhases = (
-				D89BCF1F2D6F373000E24742 /* Sources */,
-				D89BCF202D6F373000E24742 /* Frameworks */,
-				D89BCF212D6F373000E24742 /* Resources */,
+				D89BCF372D7090CB00E24742 /* Sources */,
+				D89BCF382D7090CB00E24742 /* Frameworks */,
+				D89BCF392D7090CB00E24742 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				D89BCF272D6F373000E24742 /* VPNPacketTunnel */,
+				D89BCF3D2D7090CB00E24742 /* MyVPNProviderExtension */,
 			);
-			name = VPNPacketTunnel;
+			name = MyVPNProviderExtension;
 			packageProductDependencies = (
 			);
-			productName = VPNPacketTunnel;
-			productReference = D89BCF232D6F373000E24742 /* VPNPacketTunnel.appex */;
+			productName = MyVPNProviderExtension;
+			productReference = D89BCF3B2D7090CB00E24742 /* MyVPNProviderExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -202,7 +206,7 @@
 					D89BCE912D6C2ED600E24742 = {
 						CreatedOnToolsVersion = 16.0;
 					};
-					D89BCF222D6F373000E24742 = {
+					D89BCF3A2D7090CB00E24742 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -222,7 +226,7 @@
 			projectRoot = "";
 			targets = (
 				D89BCE912D6C2ED600E24742 /* vpn-client */,
-				D89BCF222D6F373000E24742 /* VPNPacketTunnel */,
+				D89BCF3A2D7090CB00E24742 /* MyVPNProviderExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -235,7 +239,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D89BCF212D6F373000E24742 /* Resources */ = {
+		D89BCF392D7090CB00E24742 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,7 +256,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D89BCF1F2D6F373000E24742 /* Sources */ = {
+		D89BCF372D7090CB00E24742 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -262,10 +266,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D89BCF2D2D6F373000E24742 /* PBXTargetDependency */ = {
+		D89BCF432D7090CB00E24742 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D89BCF222D6F373000E24742 /* VPNPacketTunnel */;
-			targetProxy = D89BCF2C2D6F373000E24742 /* PBXContainerItemProxy */;
+			target = D89BCF3A2D7090CB00E24742 /* MyVPNProviderExtension */;
+			targetProxy = D89BCF422D7090CB00E24742 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -455,16 +459,16 @@
 			};
 			name = Release;
 		};
-		D89BCF302D6F373000E24742 /* Debug */ = {
+		D89BCF462D7090CB00E24742 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = VPNPacketTunnel/VPNPacketTunnel.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MyVPNProviderExtension/MyVPNProviderExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KF4T4F29C9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VPNPacketTunnel/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = VPNPacketTunnel;
+				INFOPLIST_FILE = MyVPNProviderExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyVPNProviderExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -472,7 +476,8 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fimacomarketing.testvpn.VPNPacketTunnel;
+				"OTHER_LDFLAGS[arch=*]" = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fimacomarketing.testvpn.MyVPNProviderExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -481,16 +486,16 @@
 			};
 			name = Debug;
 		};
-		D89BCF312D6F373000E24742 /* Release */ = {
+		D89BCF472D7090CB00E24742 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = VPNPacketTunnel/VPNPacketTunnel.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MyVPNProviderExtension/MyVPNProviderExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KF4T4F29C9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = VPNPacketTunnel/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = VPNPacketTunnel;
+				INFOPLIST_FILE = MyVPNProviderExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyVPNProviderExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -498,7 +503,8 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fimacomarketing.testvpn.VPNPacketTunnel;
+				"OTHER_LDFLAGS[arch=*]" = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fimacomarketing.testvpn.MyVPNProviderExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -528,11 +534,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D89BCF2F2D6F373000E24742 /* Build configuration list for PBXNativeTarget "VPNPacketTunnel" */ = {
+		D89BCF452D7090CB00E24742 /* Build configuration list for PBXNativeTarget "MyVPNProviderExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D89BCF302D6F373000E24742 /* Debug */,
-				D89BCF312D6F373000E24742 /* Release */,
+				D89BCF462D7090CB00E24742 /* Debug */,
+				D89BCF472D7090CB00E24742 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
